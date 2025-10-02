@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AvailabilityController;
@@ -17,6 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Rota para verificar disponibilidade
 Route::get('/professionals/{professional}/availability', [AvailabilityController::class, 'show']);
+
+// Rota para listar todos profissionais
+Route::get('/professionals', [UserController::class, 'index']);
 
 // Rota para criar um novo agendamento
 Route::post('/appointments', [AppointmentController::class, 'store']);
