@@ -19,6 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Rota para verificar disponibilidade
 Route::get('/professionals/{professional}/availability', [AvailabilityController::class, 'show']);
 
+// Rota para buscar um único profissional pelo ID
+Route::get('/professionals/{user}', [UserController::class, 'show']);
+
 // Rota para listar todos profissionais
 Route::get('/professionals', [UserController::class, 'index']);
 
