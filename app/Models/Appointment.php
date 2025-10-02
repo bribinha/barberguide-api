@@ -9,6 +9,14 @@ class Appointment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'client_id',
+        'professional_id',
+        'service_id',
+        'start_time',
+        'end_time',
+    ];
+
     // Um agendamento pertence a um cliente, um profissional e um serviço
     public function client()
     {
