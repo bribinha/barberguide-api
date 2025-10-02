@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('work_hours', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->tinyInteger('day_of-week'); // 0 = Domingo, 1 = Segunda
+            $table->tinyInteger('day_of_week'); // 0 = Domingo, 1 = Segunda
             $table->time('start_time');
             $table->time('end_time');
             $table->timestamps();
