@@ -39,8 +39,8 @@ class AppointmentController extends Controller
             'client_id' => $validated['client_id'],
             'professional_id' => $validated['professional_id'],
             'service_id' => $validated['service_id'],
-            'start_time' => $validated['start_time'],
-            'end_time' => $validated['end_time'],
+            'start_time' => $startTime,
+            'end_time' => $endTime,
         ]);
 
         return response()->json($appointment, 201);
