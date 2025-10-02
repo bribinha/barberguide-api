@@ -10,6 +10,12 @@ use Illuminate\Http\JsonResponse;
 
 class AppointmentController extends Controller
 {
+    public function index(): JsonResponse
+    {
+        $appointments = Appointment::all();
+        return response()->json($appointments);
+    }
+
     public function store(StoreAppointmentRequest $request): JsonResponse
     {
         $validated = $request->validated();
