@@ -75,3 +75,20 @@ Para executar a suíte de testes de funcionalidade, rode:
 
 ```bash
 php artisan test
+```
+### Endpoints da API
+
+| Método | Endpoint                                             | Descrição                                                  |
+| :----- | :--------------------------------------------------- | :--------------------------------------------------------- |
+| `GET`  | `/api/professionals`                                 | Retorna uma lista de todos os usuários profissionais.      |
+| `GET`  | `/api/professionals/{id}`                            | Retorna os detalhes de um profissional específico.         |
+| `GET`  | `/api/professionals/{id}/availability?date=Y-m-d`      | Retorna os horários disponíveis para um profissional em uma data. |
+| `POST` | `/api/appointments`                                  | Cria um novo agendamento.                                  |
+
+### 🔮 Próximos Passos
+
+* **[ ] Implementação das rotas de login, register e logout.**
+* **[ ] Sistema de Roles/Permissions (Cliente vs. Profissional).**
+* **[ ] Notificações por e-mail para agendamentos.**
+* **[ ] Implementação de cache com Redis para otimizar queries.**
+* **[ ] Arquitetura Multi-tenancy para escalar o sistema.**
